@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "/protos";
+
+import "protos/request.proto";
+import "protos/response.proto";
+
+service GrpcServer {
+  rpc Send(stream Request) returns (stream Response);
+}

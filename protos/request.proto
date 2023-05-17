@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "/protos";
+
+message Request {
+	string action = 1;
+	string traceId = 2;
+	string tag = 3;
+	bytes  payload = 4;
+}
